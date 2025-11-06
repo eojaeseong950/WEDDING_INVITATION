@@ -2,6 +2,7 @@
   "name": "wedding-invitation",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://ejs95.github.io/WEDDING_INVITATION",
   "description": "wedding-invitation",
   "author": "S-jooyoung",
   "keywords": [
@@ -10,9 +11,10 @@
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
-    "build": "gatsby build",
+    "build": "gatsby build --prefix-paths",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "deploy": "gatsby build --prefixpaths && gh-pages -d public"
   },
   "dependencies": {
     "antd": "^4.20.4",
@@ -24,6 +26,10 @@
     "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^17.0.1",
     "react-image-gallery": "^1.2.8",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "tmp": "^0.2.5"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
